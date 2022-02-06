@@ -3,7 +3,7 @@ node {
          checkout scm
      }
      stage('Build image') {
-         app = docker.build("parkhaemi/express")
+         app = docker.build("parkhaemi/flask-example")
          
      }
      stage('Push image') {
@@ -15,7 +15,7 @@ node {
 }
 
 stage('Build image') {
-  app = docker.build("haemi21/express")
+  app = docker.build("parkhaemi/flask-example")
 }
 
 stage('Push image') {
@@ -25,3 +25,4 @@ stage('Push image') {
      app.push("latest")
   }
 }
+
