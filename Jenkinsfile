@@ -15,7 +15,7 @@ node {
 }
 
 stage('Build image') {
-  app = docker.build("parkhaemi/flask-example")
+  app = docker.build("haemi21/flask-example")
 }
 
 stage('Push image') {
