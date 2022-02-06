@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  ai_flask:
+    #image: kmg2933/welfare-for-everyone:0916
+    build: 
+      context: ./ai/KcELECTRAchatbot/flask
+      dockerfile: Dockerfile
+
+  ai_ksBERT:
+    #image: bookbug/kosbert_image
+    build: 
+      context: ./ai/KoSentenceBERTchatbot
+      dockerfile: Dockerfile
+  
+
+  server:
+    #image: node:16
+    build: 
+      context: ./server
+      dockerfile: Dockerfile
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
